@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getOtp()">Get OTP</button>
+</body>
+<script>
+    //Math.PI
+    //Math.round(x)
+    //Math.pow(x,y)
+    //Math.sqrt(x)
+    //Math.abs(-x)
+    //Math.ceil(x)
+    //Math.floor(x)
+    //Math.floor(x)
+    //Math.mix(x,y,z)
+    //Math.max(x,y,z)
+    //Math.random
+
+
+    var x=Math.round(3.6);
+    var y=Math.pow(3,6);
+    var z=Math.sqrt(5);
+    var a=Math.abs(-4.5);
+    var b=Math.ceil(6.78);
+    var c=Math.floor(6.78);
+    var d=Math.min(3,6,9);
+    var e=Math.max(3,6,9);
+    var f=Math.random;
+    document.write("<br/> "+x);
+    document.write("<br/>  "+y);
+    document.write("<br/>  "+z);
+    document.write("<br/>  "+a);
+    document.write("<br/>  "+b);
+    document.write("<br/>  "+c);
+    document.write("<br/>  "+d);
+    document.write("<br/>  "+e);
+    document.write("<br/>  "+f);
+
+
+
+//OTP GETTING EXAMPLR
+var otp=Math.floor(Math.random()*10000);
+document.write("<br/> "+otp);
+
+    function getOtp(){
+        var xx=Math.random()*10000;
+        var OTP=Math.floor(xx);
+        document.write(OTP);
+    }
+</script>
+</html>
