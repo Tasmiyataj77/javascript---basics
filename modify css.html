@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            margin-top: 50px;
+           color: red; 
+           font-size: 50px;
+           text-align: center;
+           cursor: pointer;
+           transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" onclick="modify()" onmouseleave="unmodify()">tassu</div>
+</body>
+<script>
+    function modify(){
+        //alert("hi tassu❤️");
+        document.getElementById('main').style.fontSize="100px";
+        document.getElementById('main').style.color="blue";
+        document.getElementById('main').style.fontFamily="verdana";
+    }
+    function unmodify(){
+        document.getElementById('main').style.fontSize="50px";
+        document.getElementById('main').style.color="yellow";
+    }
+</script>
+</html>
