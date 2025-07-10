@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        body{
+            background-color: rgba(0, 0, 0, 0.793);
+            margin-top:30px;
+            padding-left:280px;
+        }
+        input{
+            border-radius: 2px;
+            background-color: rgb(240, 238, 238);
+        }
+        form{
+            margin: 10px;
+            padding: 30px;
+            padding-right: 5px;
+            background-color:white;
+            border: none;
+            width: 210px;
+            position:relative;
+            display: block;
+             border-radius: 2px;
+            height:280px;
+        }
+        #username{
+            width: 176px;
+            height: 25px;
+            border:none;
+        }
+        #confirm_password{
+            width: 176px;
+            height: 25px;
+            border:none;
+            background-color: rgb(214, 212, 212);
+        }
+        #password {
+            width: 176px;
+            height: 25px;
+            border:none;
+        }
+        #submit{
+            background-color: #3b5cae;
+            width: 180px;
+            height: 25px;
+            color: white;
+            border: none;
+            border-radius: 2px;
+        }
+        label{
+            font-size: 10px;
+        }
+        label::after{
+            content:"*";
+        }
+        error{
+            font-size: 10px;
+            margin-top: 3px;
+            color: red;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return validate()">
+        <p>
+            <h1 style="font-size: 20px; text-align:center;">WsCube Tech <br>Registration Form</h1>
+        </p>
+        <p>
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" placeholder="Username">
+        </p>
+        <p>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" >
+        </p>
+        <p>
+            <label for="confirm_password">Confirm Password</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" onkeyup="check(this)">
+            <error id="alert"></error>
+        
+        </p>
+        <p>
+            <input type="submit" id="submit" value="Submit">
+        </p>
+    </form>
+    
+</body>
+<script>
+    window.addEventListener('keyup',event=>{
+       var isCaps= event.getModifierState('CapsLock');
+       if(isCaps){
+        document.getElementById('alert').innerText="WARNING! CapsLock is ON";
+       }else{
+        document.getElementById('alert').innerText="";
+       }
+    })
+
+</script>
+</html>
